@@ -1,0 +1,75 @@
+/* Reset some basic styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0f0f; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Header styles */
+h1, h2, h3 {
+    color: #00ffcc; /* Neon cyan */
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+/* Form styles */
+form {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Button styles */
+button {
+    background-color: #00ffcc; /* Neon cyan */
+    color: #000000; /* Black text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #00cc99; /* Darker neon cyan on hover */
+    }
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Link styles */
+a {
+    color: #00ffcc; /* Neon cyan links */
+}
+
+    a:hover {
+        text-decoration: underline;
+    }

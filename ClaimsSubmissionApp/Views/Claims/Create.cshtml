@@ -1,0 +1,47 @@
+﻿@model ClaimsSubmissionApp.Models.Claim
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Claim</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Submit Your Claim</h1>
+
+    <form asp-action="Create" method="post">
+        <div>
+            <label>Lecturer Name:</label>
+            <input asp-for="LecturerName" required />
+            <span asp-validation-for="LecturerName"></span>
+        </div>
+
+        <div>
+            <label>Hours Worked:</label>
+            <input asp-for="HoursWorked" type="number" required />
+            <span asp-validation-for="HoursWorked"></span>
+        </div>
+
+        <div>
+            <label>Hourly Rate:</label>
+            <input asp-for="HourlyRate" type="number" required />
+            <span asp-validation-for="HourlyRate"></span>
+        </div>
+
+        <div>
+            <label>Additional Notes:</label>
+            <textarea asp-for="AdditionalNotes"></textarea>
+            <span asp-validation-for="AdditionalNotes"></span>
+        </div>
+
+        <button type="submit">Submit Claim</button>
+    </form>
+
+    <a href="@Url.Action("Index")">View All Claims</a>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>

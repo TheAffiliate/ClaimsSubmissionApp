@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ClaimsSubmissionApp.Models.Claim>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims List</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Submitted Claims</h1>
+
+    <table border="1">
+        <tr>
+            <th>Lecturer Name</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Status</th>
+        </tr>
+
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.LecturerName</td>
+                <td>@claim.HoursWorked</td>
+                <td>@claim.HourlyRate</td>
+                <td>@claim.Status</td>
+            </tr>
+        }
+    </table>
+
+    <a href="@Url.Action("Create")">Submit Another Claim</a>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
